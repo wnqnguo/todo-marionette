@@ -10,7 +10,7 @@ function( Backbone, Marionette, FormView, ListView, template) {
   	el: '#main',
   	template: template,
     initialize: function(){
-		_.bindAll(this);
+		//_.bindAll(this);
 		this.render();
 				
 	},
@@ -23,7 +23,8 @@ function( Backbone, Marionette, FormView, ListView, template) {
 	    add: 'itemAdded'
 	  },
 
-	  render: function() {
+	  onRender: function() {
+	  	//Marionette.View.prototype.render.call(this);
 	    var formView = new FormView({model: this.model});
 	    var listView = new ListView({collection: this.collection});
 	    var that = this;

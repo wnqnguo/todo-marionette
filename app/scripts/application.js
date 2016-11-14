@@ -9,34 +9,39 @@ define([
 function( Backbone,Marionette, LayoutView, template, todo) {
     'use strict';
 
-	var App = new Backbone.Marionette.Application();
+	var Application = Marionette.Application.extend({
+		region: '#main',
+		initialize: function(options) {
+		}
+	});
 
+    var App = new Application();
 	/* Add application regions here */
-	App.addRegions({});
+	//App.addRegions({});
     App.on('start', function(options){
     	Backbone.history.start();
     	 var todo = new LayoutView({
-	      collection: new Backbone.Collection(options.initialData.items)
-	      //model: new todo()
+	      collection: new Backbone.Collection([{id:1,item:"do something today"}]),
+	      model: todo
 	    });
-	    //todo.render();
+	    todo.render();
 	    //todo.triggerMethod('show');
     })
 	/* Add initializers here */
-	App.addInitializer( function () {
+	// App.addInitializer( function () {
 	
-		// var HelloWorld = Backbone.Marionette.View.extend({  // 2
+	// 	// var HelloWorld = Backbone.Marionette.View.extend({  // 2
 
-  // 			render: function(){
-  // 				 this.$el.html("Hello HelloWorld");
-  // 				 return this;
-  // 			}
-		// });
+ //  // 			render: function(){
+ //  // 				 this.$el.html("Hello HelloWorld");
+ //  // 				 return this;
+ //  // 			}
+	// 	// });
 
-		// var hello = new HelloWorld({ el: "#main"});  // 5
+	// 	// var hello = new HelloWorld({ el: "#main"});  // 5
 
-		// hello.render();
-	});
+	// 	// hello.render();
+	// });
 
     
 	return App;

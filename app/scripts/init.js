@@ -22,14 +22,15 @@ require.config({
 
     paths: {
         jquery: '../bower_components/jquery/jquery',
-        backbone: '../bower_components/backbone-amd/backbone',
-        underscore: '../bower_components/underscore-amd/underscore',
+        backbone: '../bower_components/backbone/backbone',
+        underscore: '../bower_components/underscore/underscore',
 
         /* alias all marionette libs */
-        'backbone.marionette': '../bower_components/backbone.marionette/lib/core/amd/backbone.marionette',
+        'backbone.marionette': '../bower_components/backbone.marionette/lib/backbone.marionette',
         'backbone.wreqr': '../bower_components/backbone.wreqr/lib/amd/backbone.wreqr',
         'backbone.babysitter': '../bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
-
+        'backbone.radio': '../bower_components/backbone.radio/build/backbone.radio',
+ 
         /* alias the bootstrap js lib */
         bootstrap: 'vendor/bootstrap',
 
