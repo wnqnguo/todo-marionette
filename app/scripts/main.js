@@ -14,5 +14,5 @@ function ( Backbone, Marionette, App, LayoutView) {
 	    {assignee: 'Andrew', text: 'Do some coding'}
 	  ]
 	};
-	App.start({initialData: initialData});
+	App.start();
 });

@@ -29,7 +29,7 @@ function( Backbone, Marionette, FormView, ListView, template) {
 	    var listView = new ListView({collection: this.collection});
 	    var that = this;
         console.log("called on show");
-        console.dir(that.form);
+        //console.dir(that.form);
 	    this.showChildView('form', formView);
 	    this.showChildView('list', listView);
 	  },
