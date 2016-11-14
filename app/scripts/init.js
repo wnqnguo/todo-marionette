@@ -23,7 +23,7 @@ require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
         backbone: '../bower_components/backbone/backbone',
-        underscore: '../bower_components/underscore/underscore',
+        'underscore': '../bower_components/underscore/underscore',
 
         /* alias all marionette libs */
         'backbone.marionette': '../bower_components/backbone.marionette/lib/backbone.marionette',

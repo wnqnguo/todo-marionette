@@ -56,7 +56,11 @@ function( Backbone, Marionette, FormView, ListView, template) {
 	      assignee: '',
 	      text: ''
 	    });
-	  }
+	  },
+	   onChildviewFinishedTodo: function(child){
+	   		console.log("clicked done");
+	   	
+	   }
 	});
      return layoutView;
 });
