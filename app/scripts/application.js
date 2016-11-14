@@ -3,10 +3,10 @@ define([
 	
 	'backbone.marionette',
 	'./Views/layoutView',
-	'./models/todo'
+	'./models/TodoModel'
 ],
 
-function( Backbone,Marionette, LayoutView, template, todo) {
+function( Backbone,Marionette, LayoutView, template, TodoModel) {
     'use strict';
  //     var initialData = {
 	//   	items: [
@@ -17,7 +17,7 @@ function( Backbone,Marionette, LayoutView, template, todo) {
 	var Application = Marionette.Application.extend({
 		region: '#main',
 		initialize: function(options) {
-			console.log("in initialized options are ");
+		
 			//console.dir(options);
 		}
 	});
@@ -39,11 +39,12 @@ function( Backbone,Marionette, LayoutView, template, todo) {
     	console.dir(options);
     	 var todo = new LayoutView({
 	      collection: new Backbone.Collection(options.initialData.items),
-	      model: todo
+	      model: new Backbone.Model(TodoModel)
 	    });
-    	 console.log("in start options are ");
-			console.dir(options);
+   
 	    todo.render();
+	    console.log("todo is ");
+	    console.dir(todo);
 	    //todo.triggerMethod('show');
     })
 	/* Add initializers here */

@@ -28,19 +28,26 @@ function( Backbone, Marionette, FormView, ListView, template) {
 	    var formView = new FormView({model: this.model});
 	    var listView = new ListView({collection: this.collection});
 	    var that = this;
-        console.log("called on show");
+        console.log("called on show model is");
+        console.dir(that.model);
         //console.dir(that.form);
 	    this.showChildView('form', formView);
 	    this.showChildView('list', listView);
 	  },
 
 	  onChildviewAddTodoItem: function(child) {
+	  	console.log("model is ");
+	  	var that = this;
+	  	console.dir(that);
+	  	console.log("collection is: ");
+	  	console.dir(that.collection);
 	    this.model.set({
 	      assignee: child.ui.assignee.val(),
 	      text: child.ui.text.val()
 	    }, {validate: true});
-
+       
 	    var items = this.model.pick('assignee', 'text');
+
 	    this.collection.add(items);
 	  },
 
