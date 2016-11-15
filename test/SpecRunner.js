@@ -6,7 +6,7 @@ require.config({
 
     paths: {
         spec: '../../test/spec', // lives in the test directory
-
+        require: '../app/bower_components/requirejs/require',
         jquery: '../bower_components/jquery/jquery',
         backbone: '../bower_components/backbone-amd/backbone',
         underscore: '../bower_components/underscore-amd/underscore',
@@ -45,6 +45,7 @@ require.config({
 /* require test suite */
 require([
     'jquery',
+    'require',
     'spec/testSuite'
 ],
 function( $, testSuite ) {
