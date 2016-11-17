@@ -26,7 +26,9 @@ function( Backbone, Marionette, template ) {
 	    text: '#id_text'
 	  },
 	  clearText: function(){
+	  	console.log("called clear test");
 	  	$("#id_text").val('');
+	  	console.log("done");
 	  },
 	  clearAssign: function(){
 	  	$("#id_assignee").val('');
