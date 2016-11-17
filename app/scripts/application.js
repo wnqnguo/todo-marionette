@@ -1,12 +1,10 @@
 define([
 	'backbone',
-	
 	'backbone.marionette',
 	'./Views/layoutView',
 	'./models/TodoModel'
 ],
-
-function( Backbone,Marionette, LayoutView, template, TodoModel) {
+function( Backbone,Marionette,LayoutView,TodoModel) {
     'use strict';
  //     var initialData = {
 	//   	items: [
