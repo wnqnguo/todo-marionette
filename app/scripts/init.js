@@ -1,6 +1,6 @@
 require.config({
 
-    baseUrl: "/scripts",
+    //baseUrl: "/scripts",
 
     /* starting point for application */
     deps: ['backbone.marionette', 'bootstrap', 'main'],

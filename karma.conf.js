@@ -15,21 +15,29 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'test-main.js',
+      'app/scripts/init.js',
+        {pattern: 'app/bower_components/jquery/jquery.js', included:false, watching: false},
+          {pattern: 'app/bower_components/underscore/underscore.js', included:false, watching: false},
+          {pattern: 'app/bower_components/backbone/backbone.js', included:false, watching: false},
+          {pattern: 'app/bower_components/requirejs-text/text.js', included:false, watching: false},
+          {pattern: 'app/bower_components/backbone.marionette/lib/backbone.marionette.js', included:false, watching: false},
+        {pattern: 'app/bower_components/require-handlebars-plugin/hbs.js', included: false},
+        {pattern: 'app/bower_components/require-handlebars-plugin/Handlebars.js', included: false},
+        {pattern: 'app/bower_components/require-handlebars-plugin/hbs/i18nprecompile.js', included: false},
+        {pattern: 'app/bower_components/require-handlebars-plugin/hbs/json2.js', included: false},
+        {pattern: 'app/bower_components/backbone.radio/build/backbone.radio.js', included: false},
+      {pattern:'app/scripts/**/*.js', included:false}, //to load sub-directory level js files
+        {pattern: 'app/scripts/**/*.hbs', included: false},//hbs template
+      {pattern:'test/**/*spec.js',included:false}
 
-      {pattern: './app/bower_components/jquery/jquery.js', included:false, watching: false},
-      {pattern: './app/bower_components/underscore/underscore.js', included:false, watching: false},
-      {pattern: './app/bower_components/backbone/backbone.js', included:false, watching: false},
-      {pattern: './app/bower_components/requirejs-text/text.js', included:false, watching: false},
-      {pattern: './app/bower_components/backbone.marionette/lib/backbone.marionette.js', included:false, watching: false},
-      {pattern:'./app/scripts/*.js', included:false},
-      {pattern:'test/**/*spec.js',included:true},
-      {pattern:'test-main.js', included:false}
     ],
 
 
     // list of files to exclude
     exclude: [
-        './app/scripts/main.js'
+        '/base/app/scripts/main.js'
+
     ],
 
 

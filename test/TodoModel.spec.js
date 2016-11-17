@@ -5,7 +5,7 @@
 // 	});
 // 	expect(test.get("text")).toEqual("Faye");
 // })
-define(['app/scripts/models/TodoModel'],function(TodoModel){
+define(['models/TodoModel'],function(TodoModel){
 	todo = new TodoModel({
 		assignee: "Faye",
  		text: "write tests"
