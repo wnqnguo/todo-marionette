@@ -93,17 +93,20 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 </style>
 </head>
 
-<body id="HTMLReporter" class="html-reporter">
-<h1>Tested in Chrome 54.0.2840 (Mac OS X 10.11.6) on Thu Nov 17 2016</h1>
+<body id="HTMLReporter" class="html-reporter showDetails">
+<h1>Tested in Chrome 54.0.2840 (Mac OS X 10.11.6) on Fri Nov 18 2016</h1>
 
 <div class="alert">
 
 
+<!-- <span class="failingAlert bar">Failed 1 specs</span> -->
+<span class="failingAlert bar"><span class="fold-buttons"><a href="#" onclick="fold();">Fold</a> | 
+  <a href="#" onclick="unfold();">Unfold</a></span>10 specs, 1 failed, 0 pending</span>
+<span class="resultsMenu bar">
+<a class="summaryMenuItem" onclick="showSummary();" href="#">Spec List<a>|<a 
+   class="detailsMenuItem" onclick="showFailures();" href="#">Failures</a>
+</span>
 
-  
-  <span class="passingAlert bar"><span class="fold-buttons"><a href="#" onclick="fold();">Fold</a> | 
-  <a href="#" onclick="unfold();">Unfold</a></span>10 specs, 0 failed, 0 pending</span>
-  
 
 
 </div>
@@ -123,7 +126,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
     
     </div>
   
-    <div class="suite passed">
+    <div class="suite failed">
       <span class="description">formView test</span>
     
       <div class="specSummary passed">
@@ -134,7 +137,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       <span class="description">it should be a form</span>
       </div>
     
-      <div class="specSummary passed">
+      <div class="specSummary failed">
       <span class="description">it should clear input on user click</span>
       </div>
     
@@ -174,6 +177,16 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 
 <div id="details">
   
+  
+  <div class="specDetail failed">
+    <span class="description">formView test it should clear input on user click</span>
+    <div class="stackTrace">
+      <div class="resultMessage">Expected spy clearText to have been called.
+    at Object.&lt;anonymous&gt; (http://localhost:9876/base/test/FormView.spec.js:27:43)</div>
+    </div>
+  </div>
+  
+  
 </div>
 
 <script>
@@ -185,7 +198,7 @@ document.body.onkeypress = function (e) {
   switch (e.keyCode) {
     case 102: toggleFold(); break;
     case 49: showSummary(); break;
-    
+    case 50: showFailures(); break;
   }
 };
 

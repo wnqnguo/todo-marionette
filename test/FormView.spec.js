@@ -9,7 +9,7 @@ define(['Views/formView'],function(formView){
 	  
       form = new formView();
       form.render();
-      spyOn(form, "clearText");
+      spyOn(formView.prototype, "clearText");
 	  });
 		it("it should be defined", function() {
 	      expect(form).toBeDefined();
@@ -22,9 +22,9 @@ define(['Views/formView'],function(formView){
 	      //var val = form.$el.find("#id_text").val();
 	      // console.log("testing click",val);
 		   
-	      //$(form.$el.find("#id_text")).trigger("click");
-	       form.clearText();
-		   expect(form.clearText).toHaveBeenCalled();
+	      $(form.$el.find("#id_text")).trigger("click");
+	       //form.clearText();
+		   expect(formView.prototype.clearText).toHaveBeenCalled();
 
 		});
 	
